@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.content-home{
+    /* background-color: blanchedalmond; */
+    padding-top: 0;
+    margin-top: 0;
+    height: 36rem;
+    width: 100%;
+    background-image: url(../img/back.avif);
+    /* transform: none; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: brightness(100%);
+}
