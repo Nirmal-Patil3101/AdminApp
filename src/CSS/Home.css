@@ -7,12 +7,15 @@
     /* background-color: blanchedalmond; */
     padding-top: 0;
     margin-top: 0;
-    height: 36rem;
+    height: 37rem;
     width: 100%;
-    background-image: url(../img/back.avif);
+    background-image: url(../assets/img/homebak.jpg);
     /* transform: none; */
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    filter: brightness(100%);
+    filter: brightness(60%);
+}
+.demo{
+    color:white;
 }

@@ -3,26 +3,15 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 .componant{
-    /* background-color: rgb(114, 175, 228); */
-    width: 100%;
-    /* margin-top: 0;
-    padding-top: 0; */
-    /* display: flex; */
-    /* height: 1rem; */
-}
-
-.flex-column{
-    text-decoration: none;
     display: flex;
-    gap: 10px;
-}
-
-.brand{
+    align-items: center;
+    /* justify-content: center; */
+    background-color:black;
+    color: white;
     height: 3rem;
-    width: 100%;
-    margin-top: 0;
-    padding-top: 0;
-    background-color:paleturquoise;
+}
+.brand{
+    margin-left: 2rem;
+    color: white ! important
 }

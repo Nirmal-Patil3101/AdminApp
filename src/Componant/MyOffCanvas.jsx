@@ -5,6 +5,7 @@ import { FaHome } from "react-icons/fa";
 import { IoMenu } from "react-icons/io5";
 import { MdRateReview } from "react-icons/md";
 import { BiSolidDish } from "react-icons/bi";
+import { IoMenuSharp } from "react-icons/io5";
 import '../CSS/MyOffCanvas.css';
 
 const MyOffCanvas = () => {
@@ -17,7 +18,7 @@ const MyOffCanvas = () => {
     <div className="componant">
       <Navbar className="Navbar-con">
         <Navbar.Brand className="brand" onClick={handleShow}>
-          OffCanvas
+          <IoMenuSharp/>
         </Navbar.Brand>
       </Navbar>
 
@@ -38,10 +39,14 @@ const MyOffCanvas = () => {
             <Nav.Link as={Link} to="/review" onClick={handleClose}>
              <MdRateReview/> Review
             </Nav.Link>
-            <Nav.Link as={Link} to="/order" onClick={handleClose}>
+            {/* <Nav.Link as={Link} to="/order" onClick={handleClose}>
              <BiSolidDish/> Order
+            </Nav.Link> */}
+            <Nav.Link as={Link} to="/alldish" onClick={handleClose}>
+             <BiSolidDish/> All Dish
             </Nav.Link>
           </Nav>
+    
         </Offcanvas.Body>
       </Offcanvas>
     </div>

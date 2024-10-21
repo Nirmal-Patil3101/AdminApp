@@ -6,6 +6,7 @@ import Menu from './Menu';
 import Review from './Review';
 import Order from './Order';
 import MyOffCanvas from './MyOffCanvas';
+import Alldish from './Alldish';
 const MyRouter = () => {
   return (
     <div>
@@ -17,7 +18,8 @@ const MyRouter = () => {
           <Route path='/' element={<Home/>}/>
            <Route path='/menu' element={<Menu/>}/>
            <Route path='/review' element={<Review/>}/>
-           <Route path='/order' element={<Order/>}/>
+           {/* <Route path='/order' element={<Order/>}/> */}
+           <Route path='/alldish' element={<Alldish/>}/>
         </Routes>
       </BrowserRouter>
     </div>
