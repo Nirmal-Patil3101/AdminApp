@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Nav, Navbar, Offcanvas } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
-import { IoMenu } from "react-icons/io5";
+// import { IoMenu } from "react-icons/io5";
 import { MdRateReview } from "react-icons/md";
 import { BiSolidDish } from "react-icons/bi";
 import { IoMenuSharp } from "react-icons/io5";
@@ -33,9 +33,9 @@ const MyOffCanvas = () => {
             <Nav.Link as={Link} to="/" onClick={handleClose}>
               <FaHome/> Home
             </Nav.Link>
-            <Nav.Link as={Link} to="/menu" onClick={handleClose}>
+            {/* <Nav.Link as={Link} to="/menu" onClick={handleClose}>
               <IoMenu/> Menu
-            </Nav.Link>
+            </Nav.Link> */}
             <Nav.Link as={Link} to="/review" onClick={handleClose}>
              <MdRateReview/> Review
             </Nav.Link>
@@ -44,6 +44,9 @@ const MyOffCanvas = () => {
             </Nav.Link> */}
             <Nav.Link as={Link} to="/alldish" onClick={handleClose}>
              <BiSolidDish/> All Dish
+            </Nav.Link>
+            <Nav.Link as={Link} to="/adddish" onClick={handleClose}>
+              Add Dish
             </Nav.Link>
           </Nav>
     
