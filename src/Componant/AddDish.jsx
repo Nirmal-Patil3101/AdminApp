@@ -1,52 +1,53 @@
-import React from 'react';
-import '../CSS/AddDish.css'
+import React from "react";
+import "../CSS/AddDish.css";
+import axios from "axios";
+import { Container, Form } from "react-bootstrap";
+
 
 const AddDish = () => {
+  let submitData = async (event)=>{
+    let dishData = new FormData(event.target)
+
+    let reqDishData = Object.fromEntries(dishData.entries())
+    console.log("DATA",reqDishData);
+
+    try {
+      const result = await axios.post("http://localhost:5000/adddish",reqDishData,{
+        headers: {
+          "Content-Type": "multipart/form-data"
+        }
+      })
+      console.log(result);
+      alert("Dish Added..")
+    } catch (error) {
+      console.log(error);
+    }
+  }
   return (
-    <div >
-      <form action="#" className='componant-AddDish'>
-        <h2>Add a Dish</h2>
-        
-        {/* Dish Name */}
-        <div className="form-group">
-          <label htmlFor="dishName">Dish Name</label>
-          <input type="text" id="dishName" name="dishName" required />
-        </div>
-
-        {/* Dish Category */}
-        <div className="form-group">
-          <label htmlFor="category">Dish Category</label>
-          <select id="category" name="category" required>
-            <option value="">Select Category</option>
-            <option value="Indian">Indian</option>
-            <option value="Italian">Italian</option>
-            <option value="south indian">south indian</option>
-          </select>
-        </div>
-
-        {/* Radio Button: Veg/Non-Veg */}
-        <div className="form-group">
-          <label>Dish Type</label>
-          <div>
-            <input type="radio" id="veg" name="dishType" value="Vegetarian" required />
-            <label>Vegetarian</label>
-          </div>
-          <div>
-            <input type="radio" id="non-veg" name="dishType" value="Non-Vegetarian" />
-            <label>Non-Vegetarian</label>
-          </div>
-        </div>
-
-        {/* Message */}
-        <div className="form-group">
-          <label htmlFor="message">Additional Comments</label>
-          <textarea name="message" id="message" rows="3"></textarea>
-        </div>
-
-        <button type="submit" className="submit-btn">Add Dish</button>
-      </form>
+    <div className="Add-Dish">
+      <h1>Add Dish</h1>
+      <Container>
+        <Form onSubmit={(e)=>{e.preventDefault(); submitData(e)}} className="componant-AddDish">
+          <Form.Control type="text" placeholder="Enter Name" name="dname" />
+          <Form.Select>
+            <Form.option value="" label="Select Category"/>
+            <Form.option value="Indian" label="Indian"/>
+            <Form.option value="Italian" label="Italian"/>
+            <Form.option value="south indian" label="south indian"/>
+          </Form.Select>
+          <Form.Control type="Number" name="dprice"/>
+          <Form.Group>
+            <Form.Check type="radio" value="Vegetarians" label="Vegetarians" name="dtype"/>
+            <Form.Check type="radio" value="non-vegetarians" label="non-vegetarians" name="dtype"/>
+          </Form.Group>
+          <Form.Control type="file" name="image"/>
+          <button type="submit" className="submit-btn">
+            Add Dish
+          </button>
+        </Form>
+      </Container>
     </div>
   );
-}
+};
 
-export default AddDish;
+export default AddDish; 

@@ -1,22 +1,9 @@
-/* .dish-form{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color:rgb(243, 187, 187);
-    color: white; 
-    padding-top: 6%;
-    margin-left: 40%;
-    height: 50%;
-    width: 40%;
+.Add-Dish{
+    padding-top: 5%;
 }
-.form-group{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
- 
+
 .componant-AddDish{
-    background-color: pink;
+    background-color:lightskyblue;
           padding: 20px;
           padding-top: 2%;
           border-radius: 8px;
