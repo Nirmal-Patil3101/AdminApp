@@ -4,10 +4,12 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './Home';
 // import Menu from './Menu';
 import Review from './Review';
-// import Order from './Order';
 import MyOffCanvas from './MyOffCanvas';
 import Alldish from './Alldish';
 import AddDish from './AddDish';
+import Customers from './Customers';
+import Order from './Order';
+import Orderdetails from './Orderdetails';
 
 const MyRouter = () => {
   return (
@@ -20,9 +22,11 @@ const MyRouter = () => {
           <Route path='/' element={<Home/>}/>
            {/* <Route path='/menu' element={<Menu/>}/> */}
            <Route path='/review' element={<Review/>}/>
-           {/* <Route path='/order' element={<Order/>}/> */}
+           <Route path='/order' element={<Order/>}/>
            <Route path='/alldish' element={<Alldish/>}/>
            <Route path='/adddish' element={<AddDish/>}/>
+           <Route path='/customers' element={<Customers/>}/>
+           <Route path='/orderdetails' element={<Orderdetails/>}/>
         </Routes>
       </BrowserRouter>
     </div>

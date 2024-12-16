@@ -18,8 +18,8 @@ const Alldish = () => {
       <Row>
         {dishes.map((dish) => {
           return (
-            <Col md={3} sm={4} ld={12} className="dish-componant">
-              <Card className="card">
+            <Col key={dish._id} md={3} sm={4} ld={12} className="dish-componant">
+              <Card className="card" key={dish._id}>
                 <Card.Img src={`http://localhost:5000/${dish.dimg}`} />
                 <CardBody>
                   <Card.Text>Name:{dish.dname}</Card.Text>

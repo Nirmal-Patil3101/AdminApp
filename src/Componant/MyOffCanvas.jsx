@@ -39,14 +39,17 @@ const MyOffCanvas = () => {
             <Nav.Link as={Link} to="/review" onClick={handleClose}>
              <MdRateReview/> Review
             </Nav.Link>
-            {/* <Nav.Link as={Link} to="/order" onClick={handleClose}>
+            <Nav.Link as={Link} to="/order" onClick={handleClose}>
              <BiSolidDish/> Order
-            </Nav.Link> */}
+            </Nav.Link>
             <Nav.Link as={Link} to="/alldish" onClick={handleClose}>
              <BiSolidDish/> All Dish
             </Nav.Link>
             <Nav.Link as={Link} to="/adddish" onClick={handleClose}>
               Add Dish
+            </Nav.Link>
+            <Nav.Link as={Link} to="/customers" onClick={handleClose}>
+              Customers
             </Nav.Link>
           </Nav>
     
