@@ -1,8 +1,5 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-// import Navbar from './Navbar';
-import Home from './Home';
-// import Menu from './Menu';
 import Review from './Review';
 import MyOffCanvas from './MyOffCanvas';
 import Alldish from './Alldish';
@@ -10,6 +7,7 @@ import AddDish from './AddDish';
 import Customers from './Customers';
 import Order from './Order';
 import Orderdetails from './Orderdetails';
+import Dashbord from './Dashbord';
 
 const MyRouter = () => {
   return (
@@ -19,7 +17,8 @@ const MyRouter = () => {
       <MyOffCanvas/>
 
         <Routes>
-          <Route path='/' element={<Home/>}/>
+          <Route path='/' element={<Dashbord/>}/>
+          {/* <Route path='/' element={<Home/>}/> */}
            {/* <Route path='/menu' element={<Menu/>}/> */}
            <Route path='/review' element={<Review/>}/>
            <Route path='/order' element={<Order/>}/>

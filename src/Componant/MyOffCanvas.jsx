@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import { Nav, Navbar, Offcanvas } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { FaHome } from "react-icons/fa";
-// import { IoMenu } from "react-icons/io5";
 import { MdRateReview } from "react-icons/md";
 import { BiSolidDish } from "react-icons/bi";
 import { IoMenuSharp } from "react-icons/io5";
 import '../CSS/MyOffCanvas.css';
+import { MdDashboardCustomize } from "react-icons/md";
 
 const MyOffCanvas = () => {
   const [showCanvas, setShowCanvas] = useState(false);
@@ -31,11 +30,8 @@ const MyOffCanvas = () => {
           {/* Ensure vertical stacking with flex-column */}
           <Nav className="flex-column">
             <Nav.Link as={Link} to="/" onClick={handleClose}>
-              <FaHome/> Home
+             <MdDashboardCustomize/> Dashbord
             </Nav.Link>
-            {/* <Nav.Link as={Link} to="/menu" onClick={handleClose}>
-              <IoMenu/> Menu
-            </Nav.Link> */}
             <Nav.Link as={Link} to="/review" onClick={handleClose}>
              <MdRateReview/> Review
             </Nav.Link>

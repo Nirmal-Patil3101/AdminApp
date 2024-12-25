@@ -57,29 +57,29 @@ const Orderdetails = () => {
             <Form.Group>
               <Form.Check
                 type="radio"
-                value="preparing"
-                label="preparing"
+                value="Pending"
+                label="Pending"
                 name="orderstatus"
                 onChange={(e) => setstatus(e.target.value)}
               />
               <Form.Check
                 type="radio"
-                value="intranslate"
-                label="intranslate"
+                value="Intransit"
+                label="Intransit"
                 name="orderstatus"
                 onChange={(e) => setstatus(e.target.value)}
               />
               <Form.Check
                 type="radio"
-                value="delivery"
-                label="delivery"
+                value="Delivered"
+                label="Delivered"
                 name="orderstatus"
                 onChange={(e) => setstatus(e.target.value)}
               />
               <Form.Check
                 type="radio"
-                value="cancel"
-                label="cancel"
+                value="Cancel"
+                label="Cancel"
                 name="orderstatus"
                 onChange={(e) => setstatus(e.target.value)}
               />
