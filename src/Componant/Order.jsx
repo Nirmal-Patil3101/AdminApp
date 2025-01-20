@@ -18,7 +18,7 @@ const Order = () => {
   //   }
   //   fetchorder();
   // }, []);
-  const navigate =useNavigate()
+  // const navigate =useNavigate()
   return (
    <div>
     <Tabs

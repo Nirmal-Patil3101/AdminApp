@@ -30,9 +30,7 @@ const Orderdetails = () => {
       <h4>Customer Monileno:{orderData.ordercustomerid?.cmobile}</h4>
       <h4>OrderDate:{orderData.orderDate}</h4>
       <h4>OrderTotal:{orderData.orderTotal}</h4>
-      <h4>OrderStatus:{orderData.orderStatus}</h4>
-      {/* <h4>Dish Name:{orderData.orderItems?.dishid}</h4> */}
-      <div>
+      <h4>OrderStatus:{orderData.orderStatus}</h4>      
         <Row>
           {orderData.orderItems?.map((Item) => {
             return (
@@ -50,7 +48,6 @@ const Orderdetails = () => {
             );
           })}
         </Row>
-      </div>
       <div>
         <Container>
           <Form>
