@@ -50,17 +50,17 @@ const Dashbord = () => {
 
       <Container>
         <Row className="dashboard-row">
-          <Col className="dashboard-box">
-            <h3 onClick={()=>{navigate("/customers")}}>Total Customers: {DashboardData.CustomerCounter}</h3>
+          <Col className="dashboard-box" onClick={()=>{navigate("/customers")}}>
+            <h3 >Total Customers: {DashboardData.CustomerCounter}</h3>
           </Col>
-          <Col className="dashboard-box">
-            <h3 onClick={()=>{navigate("/alldish")}}>Total Dishes: {DashboardData.DishCounter}</h3>
+          <Col className="dashboard-box" onClick={()=>{navigate("/alldish")}}>
+            <h3>Total Dishes: {DashboardData.DishCounter}</h3>
           </Col>
-          <Col className="dashboard-box">
-            <h3 onClick={()=>{navigate("/order")}}>Total Orders: {DashboardData.OrderCounter}</h3>
+          <Col className="dashboard-box" onClick={()=>{navigate("/order")}}>
+            <h3>Total Orders: {DashboardData.OrderCounter}</h3>
           </Col>
-          <Col className="dashboard-box">
-            <h3 onClick={()=>{navigate("/review")}}>Total Reivew:{DashboardData.ReviewCounter}</h3>
+          <Col className="dashboard-box" onClick={()=>{navigate("/review")}}>
+            <h3>Total Reivew:{DashboardData.ReviewCounter}</h3>
           </Col>
           <Col className="dashboard-box">
           <h3>Total Revenue:</h3>
